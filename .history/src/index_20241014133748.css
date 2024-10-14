@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1.5rem;
-  background-color: #fefae0;
+  background-color: #dfccfb;
   padding: 20px;
 }
 
-input[type="text"],
+input[type='text'],
 button {
   font: inherit;
 }
@@ -39,7 +39,7 @@ article {
   align-items: center;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   min-width: 20px;
   min-height: 20px;
   margin-right: 1rem;
@@ -82,7 +82,7 @@ form label {
   padding-right: 30px;
 }
 
-input[type="text"] {
+input[type='text'] {
   width: 100%;
   padding: 0.5rem;
   border-radius: 10px;

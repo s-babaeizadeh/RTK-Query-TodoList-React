@@ -3,13 +3,13 @@ import {
   useAddTodoMutation,
   useUpdateTodoMutation,
   useDeleteTodoMutation,
-} from "../api/apiSlice";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash, faUpload } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+} from '../api/apiSlice';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash, faUpload } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 const TodoList = () => {
-  const [newTodo, setNewTodo] = useState("");
+  const [newTodo, setNewTodo] = useState('');
 
   const {
     data: todos,
@@ -26,7 +26,7 @@ const TodoList = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     addTodo({ userId: 1, title: newTodo, completed: false });
-    setNewTodo("");
+    setNewTodo('');
   };
 
   const newItemSection = (
@@ -51,7 +51,7 @@ const TodoList = () => {
   if (isLoading) {
     content = <p>Loading...</p>;
   } else if (isSuccess) {
-    content = todos?.map((todo) => {
+    content = todos.map((todo) => {
       return (
         <article key={todo.id}>
           <div className="todo">
@@ -72,7 +72,7 @@ const TodoList = () => {
       );
     });
   } else if (isError) {
-    content = <p>Error: {error.message || "An unexpected error occurred."}</p>;
+    content = <p>{error}</p>;
   }
 
   return (
@@ -83,5 +83,4 @@ const TodoList = () => {
     </main>
   );
 };
-
 export default TodoList;
